@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fundo">
+    <form name="calc">
+    <div id="div1">
+    
+        <h1 id="div2">Basic Calculator</h1>
+        <h2 id="div2">Ex(2+2)</h2>
+        <input id="visor" type="text" id="visor" name="visor"><br><br>
+
+        <div id="div2">
+        <input class="num" type="button" value="7" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="8" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="9" class= "botao" onclick="botao(value)">
+        <input class="num"  type="button" value="/" class= "botao" onclick="botao(value)">
+        </div>
+
+        <div id="div2">
+        <input class="num" type="button" value="4" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="5" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="6" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="*" class= "botao" onclick="botao(value)">
+        </div>
+  
+        <div id="div2">
+        <input class="num" type="button" value="1" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="2" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="3" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="-" class= "botao" onclick="botao(value)">
+        </div>
+       
+        <div id="div2">
+        <input class="num" type="button" value="C" class= "botao" onclick="reset()">
+        <input class="num" type="button" value="0" class= "botao" onclick="botao(value)">
+        <input class="num" type="button" value="=" class= "botao" onclick="calcula()">
+        <input class="num" type="button" value="+" class= "botao" onclick="botao(value)">
+        </div>
+    </div>  
+    </form>
+
+    <script>
+        alert("Welcome to the Basic Calculator!");
+        alert("Please, digit the first number, the operator and then the 2nd number.")
+        var valor;
+        function botao (num){
+            valor = document.calc.visor.value += num;
+        }
+
+        function reset(){
+            document.calc.visor.value = '';
+        }
+
+        function calcula(){
+            resultado = eval(valor);
+            if(resultado===0){
+                document.calc.visor.value = "0";
+                alert("The result is: 0"); 
+            }
+            else{
+            document.calc.visor.value = resultado;
+            alert("The result is: " + resultado);
+            }
+        }
+
+    </script>
+</body>
+</html>

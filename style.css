@@ -1,0 +1,37 @@
+.fundo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+}
+
+#div1{
+    padding: 10px;
+    background-color: white;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
+    height: 500px;
+    font-size: larger;
+}
+
+#div2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.num{
+    width: 55px;
+    height: 55px;
+}
+
+#visor{
+    position: relative;
+    left: 30%;
+    display: block;
+    width: 190px;
+    height: 25px;
+}
+
